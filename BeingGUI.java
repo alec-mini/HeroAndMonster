@@ -17,15 +17,15 @@ public class BeingGUI {
     }
     public void train(){
         power += 2;
-        health--;
-    }
-    public void reforge() {
-        gear++;
         health -= 2;
     }
+    public void reforge() {
+        gear += 1;
+        health -= 3;
+    }
     public void heal() {
-        if (health < 10) health += 4;
-        else health += 2;
+        if (health < 10) health += 5;
+        else health += 3;
     }
     public int attack() {
         return power * gear;
@@ -47,5 +47,25 @@ public class BeingGUI {
     }
     public String gear() {
         return Integer.toString(gear);
+    }
+    public void knight() {
+        health = 17;
+        power = 2;
+        gear = 7;
+    }
+    public void orc() {
+        health = 22;
+        power = 4;
+        gear = 5;
+    }
+    public void golem() {
+        health = 36;
+        power = 0;
+        gear = 5;
+    }
+    public void bowman() {
+        health = 16;
+        power = 8;
+        gear = 4;
     }
 }
